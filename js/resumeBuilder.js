@@ -18,12 +18,11 @@ var work = {
 
 var projects = {
     projects: [{
-            title: 'Portfolio Mockup',
-            dates: '1/1/2017',
-            description: 'Stylized a portfolio webpage to look similar to a provided mockup',
-            images: 'images/mockup-demo-mobile.jpg'
-        },
-    ]
+        title: 'Portfolio Mockup',
+        dates: '1/1/2017',
+        description: 'Stylized a portfolio webpage to look similar to a provided mockup',
+        images: 'images/mockup-demo-mobile.jpg'
+    }, ]
 };
 var bio = {
     name: 'Alexander Huynh',
@@ -160,7 +159,7 @@ education.displayOnlineCourses = function() {
 
         $(".education-entry:last").append(formattedTitle).append(formattedSchool).append(formattedDate).append(formattedURL);
     }, education);
-}
+};
 
 bio.displayHeader();
 bio.displayContacts();

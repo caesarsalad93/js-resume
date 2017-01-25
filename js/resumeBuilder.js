@@ -11,6 +11,7 @@ var formattedHeaderName = HTMLheaderName.replace(data, bio.name);
     
     work.display() then appends formattedHeaderName to $("#header")
 */
+$('#mapDiv').append(googleMap);
 var work = {
     jobs: [{
             employer: 'Mikuni',
@@ -34,7 +35,7 @@ var projects = {
         title: 'Portfolio Mockup',
         dates: '1/1/2017',
         description: 'Stylized a portfolio webpage to look similar to a provided mockup',
-        images: ['images/mockup-demo-mobile.jpg',]
+        images: ['images/mockup-demo-mobile.jpg', 'images/mockup-demo.png']
     }, ]
 };
 var bio = {
@@ -56,7 +57,7 @@ var education = {
         name: 'University of California, Davis',
         location: 'Davis, California',
         dates: '2013-2017',
-        url: '',
+        url: 'https://www.ucdavis.edu/',
         majors: ['Economics'],
         degree: 'B.A.'
 
@@ -69,7 +70,7 @@ var education = {
     }]
 };
 
-var data = '%data%'
+var data = '%data%';
 bio.displayHeader = function() {
     var formattedHeaderName = HTMLheaderName.replace(data, bio.name);
     var formattedHeaderRole = HTMLheaderRole.replace(data, bio.role);
@@ -108,7 +109,7 @@ bio.display = function() {
     bio.displayHeader();
     bio.displayContacts();
     bio.displaySkills();
-}
+};
 
 work.display = function() {
     work.jobs.forEach(function(job) {
@@ -153,14 +154,16 @@ education.displaySchools = function() {
         var formattedTitle = HTMLschoolName.replace(data, this.schools[index].name);
         var formattedLocation = HTMLschoolLocation.replace(data, this.schools[index].location);
         var formattedDate = HTMLschoolDates.replace(data, this.schools[index].dates);
-        var formattedMajor = HTMLschoolMajor.replace(data, this.schools[index].majors[0]);
+        var formattedMajors = this.schools[index].majors.map(function(value, index) {
+            return HTMLschoolMajor.replace(data, value);
+        });
         var formattedDegree = HTMLschoolDegree.replace(data, this.schools[index].degree);
 
         $(".education-entry:last")
             .append(formattedTitle)
             .append(formattedLocation)
             .append(formattedDate)
-            .append(formattedMajor)       
+            .append(formattedMajors)       
             .append(formattedDegree);  
         
     }, education);
@@ -187,7 +190,7 @@ education.displayOnlineCourses = function() {
 education.display = function() {
     education.displaySchools();
     education.displayOnlineCourses();
-}
+};
 
 bio.display();
 work.display();

@@ -33,8 +33,9 @@ var work = {
 var projects = {
     projects: [{
         title: 'Portfolio Mockup',
+        url: 'https://www.google.com',
         dates: '1/1/2017',
-        description: 'Stylized a portfolio webpage to look similar to a provided mockup',
+        description: 'Stylized a responsive portfolio webpage to look similar to a provided mockup',
         images: ['images/mockup-demo-mobile.jpg', 'images/mockup-demo.png']
     }, ]
 };
@@ -44,8 +45,8 @@ var bio = {
     welcomeMessage: 'Hello World!',
     biopic: 'images/panda-3.jpg',
     contacts: {
-        mobile: '555 555 5555',
-        email: 'fakeEmail@gmail.com',
+        mobile: '619 381 9317',
+        email: 'AlexanderHuynh0@gmail.com',
         github: 'caesarsalad93',
         location: 'San Diego, California'
     },
@@ -65,7 +66,7 @@ var education = {
     onlineCourses: [{
         title: 'Udacity Front-End Nanodegree',
         school: 'Udacity',
-        dates: 'In progress',
+        dates: 'Feb 2017',
         url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
     }]
 };
@@ -133,6 +134,7 @@ projects.display = function() {
     this.projects.forEach(function(project, index) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace(data, this.projects[index].title);
+        var formattedTitle = formattedTitle.replace("#", this.projects[index].url);
         var formattedDates = HTMLprojectDates.replace(data, this.projects[index].dates);
         var formattedDescription = HTMLprojectDescription.replace(data, this.projects[index].description);
         var formattedImages = this.projects[index].images.map(function(value, index) {
@@ -141,7 +143,7 @@ projects.display = function() {
 
         $(".project-entry:last")
             .append(formattedTitle)
-            .append(formattedDates)
+//            .append(formattedDates)
             .append(formattedDescription)
             .append(formattedImages);
     }, projects);
@@ -171,7 +173,7 @@ education.displaySchools = function() {
 
 education.displayOnlineCourses = function() {
     //Online Classes Title
-    $("#education").append(HTMLonlineClasses);
+//    $("#education").append(HTMLonlineClasses);
     this.onlineCourses.forEach(function(course, index) {
         $("#education").append(HTMLschoolStart);
         var formattedTitle = HTMLonlineTitle.replace(data, this.onlineCourses[index].title);
@@ -181,9 +183,9 @@ education.displayOnlineCourses = function() {
 
         $(".education-entry:last")
             .append(formattedTitle)
-            .append(formattedSchool)
+//            .append(formattedSchool)
             .append(formattedDate)
-            .append(formattedURL);
+//            .append(formattedURL);
     }, education);
 };
 

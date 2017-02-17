@@ -64,7 +64,7 @@ var education = {
 
     }],
     onlineCourses: [{
-        title: 'Udacity Front-End Nanodegree',
+        title: 'Udacity Front-End Web Developer Nanodegree',
         school: 'Udacity',
         dates: 'Feb 2017',
         url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
@@ -182,8 +182,8 @@ education.displayOnlineCourses = function() {
         var formattedURL = HTMLonlineURL.replace(data, this.onlineCourses[index].url);
 
         $(".education-entry:last")
-            .append(formattedTitle)
 //            .append(formattedSchool)
+            .append(formattedTitle)
             .append(formattedDate)
 //            .append(formattedURL);
     }, education);

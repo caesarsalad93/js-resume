@@ -5,8 +5,8 @@ Each object has a corresponding display function, e.g work.display();
 The display functions use help from the helper.js file to reformat the data so it is suitable for the HTML, then adds it to a designated element node, by ID.
 
 EXAMPLE:
-var HTMLheaderName = '<h1 id="name">%data%</h1>'; FROM helper.js file
-var formattedHeaderName = HTMLheaderName.replace(data, bio.name);
+var HTMLheaderName = '<h1 id="name">%data%</h1>'; //THIS LINE IS FROM helper.js file
+var formattedHeaderName = HTMLheaderName.replace(data, bio.name); //REPLACE ^ WITH PROVIDED BIO DATA
     formattedHeaderName === '<h1 id="name">bio.name</h1>'
     
     work.display() then appends formattedHeaderName to $("#header")
@@ -36,7 +36,8 @@ var projects = {
         url: 'https://www.google.com',
         dates: '1/1/2017',
         description: 'Stylized a responsive portfolio webpage to look similar to a provided mockup',
-        images: ['images/mockup-demo-mobile.jpg', 'images/mockup-demo.png']
+        images: ['http://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-mobile.jpg',
+                 'http://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-desktop.png']
     }, ]
 };
 var bio = {

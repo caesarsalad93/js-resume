@@ -36,8 +36,8 @@ var projects = {
         url: 'https://www.google.com',
         dates: '1/1/2017',
         description: 'Stylized a responsive portfolio webpage to look similar to a provided mockup',
-        images: ['http://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-mobile.jpg',
-                 'http://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-desktop.png']
+        images: ['https://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-mobile.jpg',
+                 'https://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-desktop.png']
     }, ]
 };
 var bio = {

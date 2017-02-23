@@ -25,10 +25,21 @@ var work = {
             title: 'Election Committee Marketing Assistant',
             location: 'Davis, California',
             dates: 'October 2015 – March 2016',
-            description: 'Handled prize packages for our “Let Your Voice Be Heard” marketing campaign. Lead tabling events to increase election awareness. Collaborated with media department to determine message and platform choices. Combined efforts lead to an increased voter turnout compared to the previous year'
+            description: 'Handled prize packages for our “Let Your Voice Be Heard” marketing campaign. Lead tabling events to increase election awareness. Collaborated with media department to determine message and platform choices.'
         }
     ]
 };
+/*
+Project Schema
+
+    {
+      title: '',
+      url: '',
+      dates: '',
+      description: '',
+      images: [''],
+    }
+*/
 
 var projects = {
     projects: [{
@@ -38,7 +49,28 @@ var projects = {
         description: 'Stylized a responsive portfolio webpage to look similar to a provided mockup',
         images: ['https://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-mobile.jpg',
                  'https://res.cloudinary.com/lptyiqogm/image/upload/v1487745932/mockup-desktop.png']
-    }, ]
+    },
+    {
+      title: 'Neighborhood Maps',
+      url: 'https://github.com/caesarsalad93/neighborhood-map-project',
+      dates: '2/**/2017',
+      description: 'A map displaying info about my favorite taco shops in San Diego',
+      images: ['https://res.cloudinary.com/lptyiqogm/image/upload/v1487826496/maps_bncwus.gif'] 
+    },
+    {
+      title: 'Tic Tac Toe',
+      url: 'https://gomix.com/#!/project/tic-tac-toe-v1',
+      dates: '12/**/2017',
+      description: 'Basic tic tac toe game built using vanilla javascript.',
+      images: [''],
+    },
+    {
+      title: 'Simon Game',
+      url: 'https://gomix.com/#!/project/simon-game-v3',
+      dates: '12/**/2017',
+      description: 'Clone of the classic memory game',
+      images: [''],
+    } ]
 };
 var bio = {
     name: 'Alexander Huynh',

@@ -75,15 +75,15 @@ var projects = {
 var bio = {
     name: 'Alexander Huynh',
     role: 'Front-end Developer',
-    welcomeMessage: 'Hello World!',
-    biopic: 'images/panda-3.jpg',
+    welcomeMessage: '',
+    biopic: '',
     contacts: {
         mobile: '619 381 9317',
         email: 'AlexanderHuynh0@gmail.com',
         github: 'caesarsalad93',
         location: 'San Diego, California'
     },
-    skills: ['Hungry to learn', 'Team player', 'Great communication']
+    skills: ['']
 };
 
 var education = {
@@ -113,7 +113,7 @@ bio.displayHeader = function() {
 
     $("#header").prepend(formattedHeaderRole)
         .prepend(formattedHeaderName)
-        .append(formattedBioPic)
+//        .append(formattedBioPic)
         .append(formattedMsg);
 };
 
@@ -142,7 +142,7 @@ bio.displaySkills = function() {
 bio.display = function() {
     bio.displayHeader();
     bio.displayContacts();
-    bio.displaySkills();
+//    bio.displaySkills();
 };
 
 work.display = function() {
